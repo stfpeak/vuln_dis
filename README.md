@@ -9,7 +9,7 @@ How to find vulnerabilities in project
 
 * AFL
 * Peach
-* libFuzzer
+* [libFuzzer](http://llvm.org/docs/LibFuzzer.html)
 
 ## Debug
 * GDB
@@ -19,3 +19,8 @@ How to find vulnerabilities in project
 * Libxml2
 * Qemu
 * KVM
+
+## LLVM
+* [Clang 5 Manual](https://clang.llvm.org/docs/UsersManual.html)
+* [AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer)
+* [AddressSanitizerFlags](https://github.com/google/sanitizers/wiki/AddressSanitizerFlags)
