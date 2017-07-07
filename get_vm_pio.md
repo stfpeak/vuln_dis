@@ -20,3 +20,30 @@
     end
 
     printf "total %lu entries.\n", $count
+    
+通用版
+
+    set pagination off
+    set $dispatch = address_space_io.dispatch
+    set $sections = $dispatch->map->sections
+    printf "sections=0x%lx\n", $sections
+
+    set $count = address_space_io.dispatch->map.sections_nb
+    printf "total %lu entries.\n", $count
+    while ($count > 0)
+        set $size = *(short*)(&$sections->size)
+        set $addr = $sections->offset_within_address_space
+        printf "port=0x%04lx, size=0x%04lx, next=0x%04lx, ", $addr, $size, $addr + $size
+
+        set $mr = $sections->mr
+        set $ops = $mr->ops
+        set $pf_read = $ops
+        printf "0x%016lx, ", $pf_read
+        x/8xb $ops
+
+        set $count = $count - 1
+        set $sections = $sections + 1
+    end
+
+    printf "total %lu entries.\n", $count
+
