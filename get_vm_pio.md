@@ -1,3 +1,5 @@
+gdb脚本打印出qemu启动后所有的mmio设备信息
+   
     set pagination off
     set $dispatch = *(long*)((long)&address_space_io + 0x40)
     set $sections = *(long*)($dispatch + 0x48)
@@ -20,7 +22,7 @@
     end
 
     printf "total %lu entries.\n", $count
-    
+    
 通用版
 
     set pagination off
