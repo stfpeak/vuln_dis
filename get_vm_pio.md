@@ -1,4 +1,4 @@
-gdb脚本打印出qemu启动后所有的mmio设备信息
+gdb脚本打印出qemu启动后所有的pio设备信息
    
     set pagination off
     set $dispatch = *(long*)((long)&address_space_io + 0x40)
