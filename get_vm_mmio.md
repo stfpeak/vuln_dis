@@ -25,7 +25,7 @@ gdb脚本打印出qemu启动后所有的mmio设备信息
 
 通用版
 
-    set pagination off
+    set pagination off
     set $dispatch = address_space_memory.dispatch
     set $sections = $dispatch->map->sections
     printf "sections=0x%lx\n", $sections
