@@ -26,4 +26,6 @@ net_tap_init()主要做了两件事：
 2. 将Tap设备的文件描述符加入Qemu事件监听列表;
 
 ## 参考
-[Qemu之Network Device全虚拟方案一:前端网络流的建立](http://royluo.org/2014/07/17/netdev-virtual-1/)
+* [Qemu之Network Device全虚拟方案一:前端网络流的建立](http://royluo.org/2014/07/17/netdev-virtual-1/)
+* [Qemu之Network Device全虚拟方案二:虚拟网卡](http://royluo.org/2014/07/20/netdev-virtual-2/)
+* [Qemu之Network Device全虚拟方案三:I/O虚拟化](http://royluo.org/2014/07/26/netdev-virtual-3/)
